@@ -8,7 +8,7 @@ This example demonstrates how to use a [DocumentIterator](https://docs.devexpre
 
 ## Implementation
 
-The document visitor is implemented according to the <strong>Visitor pattern</strong>. In this example, the custom document visitor is inherited from the <strong>DocumentVisitorBase</strong> class. The <strong>DocumentVisitorBase</strong> class implements the [IDocumentVisitor](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.IDocumentVisitor) interface. Thus, you can override only required methods of the <strong>DocumentVisitorBase</strong> class to process documents.
+The document visitor is implemented according to the <strong>Visitor pattern</strong>. In this example, the custom document visitor is inherited from the <strong>DocumentVisitorBase</strong> class. The <strong>DocumentVisitorBase</strong> class implements the [IDocumentVisitor](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.IDocumentVisitor) interface. This means you can override only the methods of the <strong>DocumentVisitorBase</strong> class to process documents.
 
 The document iterator moves over each document structure item and passes a custom document visitor object to the current item. The custom document visitor builds a string with lightweight markup for the currently processed document item.
 
