@@ -23,9 +23,10 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup2 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
-            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation2 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
+            DevExpress.XtraBars.Ribbon.GalleryItemGroup galleryItemGroup1 = new DevExpress.XtraBars.Ribbon.GalleryItemGroup();
+            DevExpress.XtraBars.Ribbon.ReduceOperation reduceOperation1 = new DevExpress.XtraBars.Ribbon.ReduceOperation();
             this.stylesRibbonPageGroup1 = new DevExpress.XtraRichEdit.UI.StylesRibbonPageGroup();
             this.galleryChangeStyleItem1 = new DevExpress.XtraRichEdit.UI.GalleryChangeStyleItem();
             this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
@@ -108,8 +109,12 @@
             this.pageIterator = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.memoEdit1 = new DevExpress.XtraEditors.MemoEdit();
-            this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController();
+            this.richEditBarController1 = new DevExpress.XtraRichEdit.UI.RichEditBarController(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
+            this.splitContainerControl1.Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
+            this.splitContainerControl1.Panel2.SuspendLayout();
             this.splitContainerControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
@@ -120,7 +125,8 @@
             // 
             // stylesRibbonPageGroup1
             // 
-            this.stylesRibbonPageGroup1.Glyph = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup1.Glyph")));
+            this.stylesRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
+            this.stylesRibbonPageGroup1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("stylesRibbonPageGroup1.ImageOptions.Image")));
             this.stylesRibbonPageGroup1.ItemLinks.Add(this.galleryChangeStyleItem1);
             this.stylesRibbonPageGroup1.Name = "stylesRibbonPageGroup1";
             // 
@@ -131,22 +137,29 @@
             // 
             this.galleryChangeStyleItem1.Gallery.ColumnCount = 10;
             this.galleryChangeStyleItem1.Gallery.Groups.AddRange(new DevExpress.XtraBars.Ribbon.GalleryItemGroup[] {
-            galleryItemGroup2});
-            this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(65, 46);
+            galleryItemGroup1});
+            this.galleryChangeStyleItem1.Gallery.ImageSize = new System.Drawing.Size(76, 57);
             this.galleryChangeStyleItem1.Id = 62;
             this.galleryChangeStyleItem1.Name = "galleryChangeStyleItem1";
             // 
             // splitContainerControl1
             // 
             this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 143);
+            this.splitContainerControl1.Location = new System.Drawing.Point(0, 193);
+            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainerControl1.Name = "splitContainerControl1";
+            // 
+            // splitContainerControl1.Panel1
+            // 
             this.splitContainerControl1.Panel1.Controls.Add(this.richEditControl1);
             this.splitContainerControl1.Panel1.Text = "Panel1";
+            // 
+            // splitContainerControl1.Panel2
+            // 
             this.splitContainerControl1.Panel2.Controls.Add(this.memoEdit1);
             this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.Size = new System.Drawing.Size(784, 418);
-            this.splitContainerControl1.SplitterPosition = 505;
+            this.splitContainerControl1.Size = new System.Drawing.Size(915, 497);
+            this.splitContainerControl1.SplitterPosition = 589;
             this.splitContainerControl1.TabIndex = 0;
             this.splitContainerControl1.Text = "splitContainerControl1";
             // 
@@ -154,14 +167,16 @@
             // 
             this.richEditControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richEditControl1.Location = new System.Drawing.Point(0, 0);
+            this.richEditControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richEditControl1.MenuManager = this.ribbonControl1;
             this.richEditControl1.Name = "richEditControl1";
-            this.richEditControl1.Size = new System.Drawing.Size(505, 418);
+            this.richEditControl1.Options.DocumentSaveOptions.CurrentFormat = DevExpress.XtraRichEdit.DocumentFormat.PlainText;
+            this.richEditControl1.Size = new System.Drawing.Size(589, 497);
             this.richEditControl1.TabIndex = 0;
-            this.richEditControl1.Text = "richEditControl1";
             // 
             // ribbonControl1
             // 
+            this.ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(35, 37, 35, 37);
             this.ribbonControl1.ExpandCollapseItem.Id = 0;
             this.ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbonControl1.ExpandCollapseItem,
@@ -229,10 +244,13 @@
             this.galleryChangeStyleItem1,
             this.findItem1,
             this.replaceItem1,
-            this.btnIteratorRun});
+            this.btnIteratorRun,
+            this.ribbonControl1.SearchEditItem});
             this.ribbonControl1.Location = new System.Drawing.Point(0, 0);
+            this.ribbonControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ribbonControl1.MaxItemId = 2;
             this.ribbonControl1.Name = "ribbonControl1";
+            this.ribbonControl1.OptionsMenuMinWidth = 385;
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.fileRibbonPage1,
             this.homeRibbonPage1,
@@ -241,7 +259,7 @@
             this.repositoryItemFontEdit1,
             this.repositoryItemRichEditFontSizeEdit1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2013;
-            this.ribbonControl1.Size = new System.Drawing.Size(784, 143);
+            this.ribbonControl1.Size = new System.Drawing.Size(915, 193);
             // 
             // undoItem1
             // 
@@ -316,10 +334,10 @@
             // barButtonGroup1
             // 
             this.barButtonGroup1.Id = 11;
-            this.barButtonGroup1.ItemLinks.Add(this.changeFontNameItem1);
+            this.barButtonGroup1.ItemLinks.Add(this.changeFontNameItem1, "FF");
             this.barButtonGroup1.ItemLinks.Add(this.changeFontSizeItem1);
-            this.barButtonGroup1.ItemLinks.Add(this.fontSizeIncreaseItem1);
-            this.barButtonGroup1.ItemLinks.Add(this.fontSizeDecreaseItem1);
+            this.barButtonGroup1.ItemLinks.Add(this.fontSizeIncreaseItem1, "FG");
+            this.barButtonGroup1.ItemLinks.Add(this.fontSizeDecreaseItem1, "FK");
             this.barButtonGroup1.Name = "barButtonGroup1";
             this.barButtonGroup1.Tag = "{97BBE334-159B-44d9-A168-0411957565E8}";
             // 
@@ -417,8 +435,8 @@
             // barButtonGroup3
             // 
             this.barButtonGroup3.Id = 13;
-            this.barButtonGroup3.ItemLinks.Add(this.changeFontColorItem1);
-            this.barButtonGroup3.ItemLinks.Add(this.changeFontBackColorItem1);
+            this.barButtonGroup3.ItemLinks.Add(this.changeFontColorItem1, "FC");
+            this.barButtonGroup3.ItemLinks.Add(this.changeFontBackColorItem1, "I");
             this.barButtonGroup3.Name = "barButtonGroup3";
             this.barButtonGroup3.Tag = "{DF8C5334-EDE3-47c9-A42C-FE9A9247E180}";
             // 
@@ -470,9 +488,9 @@
             // barButtonGroup4
             // 
             this.barButtonGroup4.Id = 14;
-            this.barButtonGroup4.ItemLinks.Add(this.toggleBulletedListItem1);
-            this.barButtonGroup4.ItemLinks.Add(this.toggleNumberingListItem1);
-            this.barButtonGroup4.ItemLinks.Add(this.toggleMultiLevelListItem1);
+            this.barButtonGroup4.ItemLinks.Add(this.toggleBulletedListItem1, "U");
+            this.barButtonGroup4.ItemLinks.Add(this.toggleNumberingListItem1, "N");
+            this.barButtonGroup4.ItemLinks.Add(this.toggleMultiLevelListItem1, "M");
             this.barButtonGroup4.Name = "barButtonGroup4";
             this.barButtonGroup4.Tag = "{0B3A7A43-3079-4ce0-83A8-3789F5F6DC9F}";
             // 
@@ -494,8 +512,8 @@
             // barButtonGroup5
             // 
             this.barButtonGroup5.Id = 15;
-            this.barButtonGroup5.ItemLinks.Add(this.decreaseIndentItem1);
-            this.barButtonGroup5.ItemLinks.Add(this.increaseIndentItem1);
+            this.barButtonGroup5.ItemLinks.Add(this.decreaseIndentItem1, "AO");
+            this.barButtonGroup5.ItemLinks.Add(this.increaseIndentItem1, "AI");
             this.barButtonGroup5.ItemLinks.Add(this.toggleShowWhitespaceItem1);
             this.barButtonGroup5.Name = "barButtonGroup5";
             this.barButtonGroup5.Tag = "{4747D5AB-2BEB-4ea6-9A1D-8E4FB36F1B40}";
@@ -518,10 +536,10 @@
             // barButtonGroup6
             // 
             this.barButtonGroup6.Id = 16;
-            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentLeftItem1);
-            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentCenterItem1);
-            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentRightItem1);
-            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentJustifyItem1);
+            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentLeftItem1, "AL");
+            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentCenterItem1, "AC");
+            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentRightItem1, "AR");
+            this.barButtonGroup6.ItemLinks.Add(this.toggleParagraphAlignmentJustifyItem1, "AJ");
             this.barButtonGroup6.Name = "barButtonGroup6";
             this.barButtonGroup6.Tag = "{8E89E775-996E-49a0-AADA-DE338E34732E}";
             // 
@@ -548,8 +566,8 @@
             // barButtonGroup7
             // 
             this.barButtonGroup7.Id = 17;
-            this.barButtonGroup7.ItemLinks.Add(this.changeParagraphLineSpacingItem1);
-            this.barButtonGroup7.ItemLinks.Add(this.changeParagraphBackColorItem1);
+            this.barButtonGroup7.ItemLinks.Add(this.changeParagraphLineSpacingItem1, "K");
+            this.barButtonGroup7.ItemLinks.Add(this.changeParagraphBackColorItem1, "H");
             this.barButtonGroup7.Name = "barButtonGroup7";
             this.barButtonGroup7.Tag = "{9A8DEAD8-3890-4857-A395-EC625FD02217}";
             // 
@@ -561,7 +579,7 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.setSesquialteralParagraphSpacingItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.setDoubleParagraphSpacingItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.showLineSpacingFormItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.addSpacingBeforeParagraphItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(DevExpress.XtraBars.BarLinkUserDefines.KeyTip, this.addSpacingBeforeParagraphItem1, "", false, true, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.Standard, "B", ""),
             new DevExpress.XtraBars.LinkPersistInfo(this.removeSpacingBeforeParagraphItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.addSpacingAfterParagraphItem1),
             new DevExpress.XtraBars.LinkPersistInfo(this.removeSpacingAfterParagraphItem1)});
@@ -625,9 +643,8 @@
             // btnIteratorRun
             // 
             this.btnIteratorRun.Caption = "Run Iterator";
-            this.btnIteratorRun.Glyph = ((System.Drawing.Image)(resources.GetObject("btnIteratorRun.Glyph")));
             this.btnIteratorRun.Id = 1;
-            this.btnIteratorRun.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("btnIteratorRun.LargeGlyph")));
+            this.btnIteratorRun.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnIteratorRun.ImageOptions.SvgImage")));
             this.btnIteratorRun.Name = "btnIteratorRun";
             this.btnIteratorRun.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnIteratorRun_ItemClick);
             // 
@@ -640,19 +657,21 @@
             // 
             // commonRibbonPageGroup1
             // 
+            this.commonRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.commonRibbonPageGroup1.ItemLinks.Add(this.undoItem1);
             this.commonRibbonPageGroup1.ItemLinks.Add(this.redoItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileNewItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileOpenItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveAsItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileNewItem1, "N");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileOpenItem1, "O");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveItem1, "S");
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.fileSaveAsItem1, "A");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.quickPrintItem1);
-            this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1);
+            this.commonRibbonPageGroup1.ItemLinks.Add(this.printItem1, "P");
             this.commonRibbonPageGroup1.ItemLinks.Add(this.printPreviewItem1);
             this.commonRibbonPageGroup1.Name = "commonRibbonPageGroup1";
             // 
             // infoRibbonPageGroup1
             // 
+            this.infoRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
             this.infoRibbonPageGroup1.ItemLinks.Add(this.showDocumentPropertiesFormItem1);
             this.infoRibbonPageGroup1.Name = "infoRibbonPageGroup1";
             // 
@@ -665,32 +684,35 @@
             this.stylesRibbonPageGroup1,
             this.editingRibbonPageGroup1});
             this.homeRibbonPage1.Name = "homeRibbonPage1";
-            reduceOperation2.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
-            reduceOperation2.Group = this.stylesRibbonPageGroup1;
-            reduceOperation2.ItemLinkIndex = 0;
-            reduceOperation2.ItemLinksCount = 0;
-            reduceOperation2.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
-            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation2);
+            reduceOperation1.Behavior = DevExpress.XtraBars.Ribbon.ReduceOperationBehavior.UntilAvailable;
+            reduceOperation1.GroupName = null;
+            reduceOperation1.ItemLinkIndex = 0;
+            reduceOperation1.ItemLinksCount = 0;
+            reduceOperation1.Operation = DevExpress.XtraBars.Ribbon.ReduceOperationType.Gallery;
+            this.homeRibbonPage1.ReduceOperations.Add(reduceOperation1);
             // 
             // clipboardRibbonPageGroup1
             // 
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteItem1);
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.cutItem1);
-            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.copyItem1);
+            this.clipboardRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteItem1, "V");
+            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.cutItem1, "X");
+            this.clipboardRibbonPageGroup1.ItemLinks.Add(this.copyItem1, "C");
             this.clipboardRibbonPageGroup1.ItemLinks.Add(this.pasteSpecialItem1);
             this.clipboardRibbonPageGroup1.Name = "clipboardRibbonPageGroup1";
             // 
             // fontRibbonPageGroup1
             // 
+            this.fontRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
             this.fontRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup1);
             this.fontRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup2);
             this.fontRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup3);
             this.fontRibbonPageGroup1.ItemLinks.Add(this.changeTextCaseItem1);
-            this.fontRibbonPageGroup1.ItemLinks.Add(this.clearFormattingItem1);
+            this.fontRibbonPageGroup1.ItemLinks.Add(this.clearFormattingItem1, "E");
             this.fontRibbonPageGroup1.Name = "fontRibbonPageGroup1";
             // 
             // paragraphRibbonPageGroup1
             // 
+            this.paragraphRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.True;
             this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup4);
             this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup5);
             this.paragraphRibbonPageGroup1.ItemLinks.Add(this.barButtonGroup6);
@@ -699,8 +721,9 @@
             // 
             // editingRibbonPageGroup1
             // 
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.findItem1);
-            this.editingRibbonPageGroup1.ItemLinks.Add(this.replaceItem1);
+            this.editingRibbonPageGroup1.CaptionButtonVisible = DevExpress.Utils.DefaultBoolean.False;
+            this.editingRibbonPageGroup1.ItemLinks.Add(this.findItem1, "FD");
+            this.editingRibbonPageGroup1.ItemLinks.Add(this.replaceItem1, "R");
             this.editingRibbonPageGroup1.Name = "editingRibbonPageGroup1";
             // 
             // pageIterator
@@ -720,9 +743,10 @@
             // 
             this.memoEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.memoEdit1.Location = new System.Drawing.Point(0, 0);
+            this.memoEdit1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.memoEdit1.Name = "memoEdit1";
             this.memoEdit1.Properties.ReadOnly = true;
-            this.memoEdit1.Size = new System.Drawing.Size(274, 418);
+            this.memoEdit1.Size = new System.Drawing.Size(314, 497);
             this.memoEdit1.TabIndex = 0;
             // 
             // richEditBarController1
@@ -788,14 +812,19 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ClientSize = new System.Drawing.Size(915, 690);
             this.Controls.Add(this.splitContainerControl1);
             this.Controls.Add(this.ribbonControl1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Ribbon = this.ribbonControl1;
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
+            this.splitContainerControl1.Panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
+            this.splitContainerControl1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
             this.splitContainerControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).EndInit();
