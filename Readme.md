@@ -16,7 +16,7 @@ The document iterator moves over each document structure item and passes a cust
 ## Files to Review
 
 * [Form1.cs](./CS/DocumentIteratorExample/Form1.cs) (VB: [Form1.vb](./VB/DocumentIteratorExample/Form1.vb))
-* [MarkdownVisitor](./CS/DocumentIteratorExample/MarkdownVisitor.cs) (VB: [MarkdownVisitor.vb](./VB/DocumentIteratorExample\MarkdownVisitor.vb))
+* [MarkdownVisitor](./CS/DocumentIteratorExample/MarkdownVisitor.cs) (VB: [MarkdownVisitor.vb](./VB/DocumentIteratorExample/MarkdownVisitor.vb))
 
 ## Documentation
 
