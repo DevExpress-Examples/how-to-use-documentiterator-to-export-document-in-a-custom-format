@@ -1,6 +1,5 @@
 ﻿using DevExpress.XtraRichEdit;
 using DevExpress.XtraRichEdit.API.Native;
-using System;
 using System.Diagnostics;
 using System.IO;
 
@@ -9,7 +8,6 @@ namespace DocumentIteratorExample {
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        [STAThread]
         static void Main(string[] args) {
 
             using (RichEditDocumentServer wordProcessor = new RichEditDocumentServer())
