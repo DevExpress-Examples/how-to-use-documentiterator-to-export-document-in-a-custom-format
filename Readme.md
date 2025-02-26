@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# WinForms Rich Text Editor - Use DocumentIterator to Export a Document in a Custom Format
+# Word Processing Document API - Use DocumentIterator to Export a Document in a Custom Format
 
 This example demonstrates how to use a [DocumentIterator](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.DocumentIterator) object and a [DocumentVisitor](https://docs.devexpress.com/OfficeFileAPI/DevExpress.XtraRichEdit.API.Native.IDocumentVisitor) implementation to export a document in a custom format. The `DocumentIterator` navigates through document elements. The document visitor is used to export document elements to a lightweight markup language ([Markdown](https://en.wikipedia.org/wiki/Markdown)).
 
