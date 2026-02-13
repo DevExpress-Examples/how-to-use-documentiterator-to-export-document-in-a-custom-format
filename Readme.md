@@ -23,7 +23,7 @@ The document iterator moves over each document structure item and passes a cust
 
 * [How to: Retrieve the List of Document Fonts using the Visitor-Iterator Pattern](https://docs.devexpress.com/WindowsForms/116746/controls-and-libraries/rich-text-editor/examples/automation/how-to-retrieve-the-list-of-document-fonts-using-the-visitor-iterator-pattern)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=word-document-api-use-documentiterator-to-export-document-in-a-custom-format&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=word-document-api-use-documentiterator-to-export-document-in-a-custom-format&~~~was_helpful=no)
 
